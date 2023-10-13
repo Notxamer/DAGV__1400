@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerControler : MonoBehaviour
-
 {
     public float horizontalinput;
     public float speed;
     public float xRange;
     public Transform Blaster;
     public GameObject Lazerbolt;
+
+    private float score = 0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +53,8 @@ public class PlayerControler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        score++;
+
+        Debug.Log("Score is: " + score);
     }
 }
