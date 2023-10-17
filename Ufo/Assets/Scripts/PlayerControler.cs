@@ -11,13 +11,14 @@ public class PlayerControler : MonoBehaviour
     public float xRange;
     public Transform Blaster;
     public GameObject Lazerbolt;
+    public GameManager gameManager;
 
-    private float score = 0f;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class PlayerControler : MonoBehaviour
 
         }
 
-         if(Input.GetKeyDown(KeyCode.Space))
+         if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOverText == false)
         {
             //Create lazerbolt at the blaster position 
             Instantiate(Lazerbolt, Blaster.transform.position, Lazerbolt.transform.rotation);
@@ -49,12 +50,5 @@ public class PlayerControler : MonoBehaviour
 
          
 }
-    //Delete any object with a trigger that hits the player
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(other.gameObject);
-        score++;
 
-        Debug.Log("Score is: " + score);
-    }
 }

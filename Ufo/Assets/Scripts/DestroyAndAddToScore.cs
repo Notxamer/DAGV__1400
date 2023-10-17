@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class DestroyAndAddToScore : MonoBehaviour
 {
+    public ScoreManager scoreManager; //Store reference to score manager
+
     private float score = 1;
     private bool display = false;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class DestroyAndAddToScore : MonoBehaviour
     {
         if(display)
         {
+            scoreManager.IncreaseScore(); //Increase the Score
             score = score + score;
             display = false;
         }
