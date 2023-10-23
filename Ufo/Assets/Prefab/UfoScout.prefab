@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -10
+  gameManager: {fileID: 0}
 --- !u!54 &-3307891536602898740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,3 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aab22ace56e9274aa51f5cb4cc3fe93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 0
+  Explode: {fileID: 8300000, guid: 94acfdff2b9098f47bdc3b74363c50f2, type: 3}
+  playerControler: {fileID: 0}

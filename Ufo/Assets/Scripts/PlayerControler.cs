@@ -12,6 +12,11 @@ public class PlayerControler : MonoBehaviour
     public Transform Blaster;
     public GameObject Lazerbolt;
     public GameManager gameManager;
+    public AudioClip blaster;
+    public AudioClip Explode;
+    public AudioOver audioOver;
+
+    public AudioSource playerAudio;
 
 
     
@@ -19,6 +24,8 @@ public class PlayerControler : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerAudio = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -46,6 +53,8 @@ public class PlayerControler : MonoBehaviour
         {
             //Create lazerbolt at the blaster position 
             Instantiate(Lazerbolt, Blaster.transform.position, Lazerbolt.transform.rotation);
+            playerAudio.PlayOneShot(blaster, .5f);
+            
         }
 
          

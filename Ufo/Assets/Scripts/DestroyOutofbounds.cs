@@ -9,11 +9,13 @@ public class DestroyOutofbounds : MonoBehaviour
     public float lowerBounds = -10;
 
     public GameManager gameManager;
+    public AudioOver audioOver;
     // Start is called before the first frame update
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioOver = GameObject.Find("GUOver").GetComponent<AudioOver>();
     }
 
     private void Awake()
@@ -30,6 +32,7 @@ public class DestroyOutofbounds : MonoBehaviour
         else if (transform.position.z < lowerBounds)
         {
             gameManager.isGameOverText = true;
+            audioOver.isGameOverText = true;
             Debug.Log("Game Over!");
             Destroy(gameObject); 
            // Time.timeScale = 0;
