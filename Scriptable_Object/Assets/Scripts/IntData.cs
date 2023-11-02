@@ -13,4 +13,8 @@ public class IntData : ScriptableObject
         set { this.value = value; }
     }
 
+    public void UpdateValue(int num)
+    {
+        value += num;
+    }
 }
