@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fafc34f56e04f5d48b195b92bb3fd192, type: 3}
   m_Name: HighScore
   m_EditorClassIdentifier: 
-  Value: 170
+  Value: 180
   disableEvent:
     m_PersistentCalls:
       m_Calls: []

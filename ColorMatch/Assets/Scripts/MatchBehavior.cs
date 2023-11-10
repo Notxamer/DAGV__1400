@@ -27,6 +27,7 @@ public class MatchBehavior : IDContainerBehavior
             Debug.Log("No Match");
             noMatchEvent.Invoke();
             yield return new WaitForSeconds(.5f);
+            noMatchDelayedEvent.Invoke();
         }
     }
 }
