@@ -37,8 +37,13 @@ public class IntData : ScriptableObject
         Value += num;
     }
 
-    public void OnDisable()
+    private void OnDisable()
     {
      disableEvent.Invoke();
+    }
+
+    public void Change()
+    {
+        
     }
 }
