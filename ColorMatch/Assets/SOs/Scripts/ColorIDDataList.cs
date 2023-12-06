@@ -14,6 +14,7 @@ public List<ColorID> colorIDList;
 
     public void SetCurrentColorRandomly()
     {
+
         num = Random.Range(0, colorIDList.Count);
         currentColor = colorIDList[num];
         Debug.Log(num);

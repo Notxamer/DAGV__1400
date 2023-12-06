@@ -12,6 +12,11 @@ public class CorutineBehaviour : MonoBehaviour
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
 
+    public bool CanRun
+    {
+        get => canRun;
+        set => canRun = value;
+    }
     private void Start()
     {
         startEvent.Invoke();
@@ -56,5 +61,6 @@ public class CorutineBehaviour : MonoBehaviour
             repeatUntilFalse.Invoke();
         }
     }
+
 
 }

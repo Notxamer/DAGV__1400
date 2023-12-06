@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fafc34f56e04f5d48b195b92bb3fd192, type: 3}
-  m_Name: HighScore
+  m_Script: {fileID: 11500000, guid: 9cd535f8e135ce848bf79a087763dc62, type: 3}
+  m_Name: CallScore
   m_EditorClassIdentifier: 
-  Value: 60
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
