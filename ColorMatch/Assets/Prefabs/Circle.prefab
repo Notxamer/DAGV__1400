@@ -188,7 +188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2616314484387305572, guid: 1fb91a1d6e9231545b161bb1e8f58b78, type: 3}
         m_TargetAssemblyTypeName: TextLabelBhaviour, Assembly-CSharp
         m_MethodName: UpdateLabel
         m_Mode: 2
